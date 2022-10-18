@@ -98,7 +98,7 @@ Clone the watson-automation repo to use a provided sample [values.yaml](../helm-
 git clone https://github.ibm.com/isv-assets/watson-automation
 ```
 
-You must edit this file to accept the Watson NLP license by setting the following property:
+You must edit the values.yaml file to accept the Watson NLP license by setting the following property:
 
 ```sh
 acceptLicense: true
@@ -112,7 +112,7 @@ cd terraform-gitops-watson-nlp/chart/watson-nlp
 helm install -f values.yaml watson-embedded .
 ```
 
-Verify the following components:
+Verify the following components were created:
 
 ```sh
 oc get deployment/watson-embedded-watson-nlp

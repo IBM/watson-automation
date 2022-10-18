@@ -1,5 +1,5 @@
 componentName: watson-nlp
-acceptLicense: true
+acceptLicense: false
 serviceType: ClusterIP
 imagePullSecrets:
   - ibm-entitlement-key
