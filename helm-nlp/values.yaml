@@ -2,10 +2,10 @@ componentName: watson-nlp
 acceptLicense: true
 serviceType: ClusterIP
 imagePullSecrets:
-  - artifactory-key
+  - ibm-entitlement-key
 registries:
   - name: watson
-    url: wcp-ai-foundation-team-docker-virtual.artifactory.swg-devops.com
+    url: cp.icr.io/cp/ai
 runtime:
   registry: watson
   image: watson-nlp-runtime:1.0.0

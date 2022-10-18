@@ -37,7 +37,7 @@ Install instructions for Helm can be found [here](https://helm.sh/docs/intro/ins
 
 **IBM Entitlement**
 
-Currently, container images for both runtime and models are located in Artifactory.  After the GA release, they will be stored in the IBM Entitled Registry.
+Container images for both runtime and models are located the IBM Entitled Registry, which requires an entitlement key.
 
 Instructions for obtaining your [IBM entitlement API key](https://www.ibm.com/docs/en/cloud-paks/cp-data/4.5.x?topic=information-obtaining-your-entitlement-api-key).
 
@@ -50,7 +50,7 @@ The chart is dependant on a pull secret for the registry/registries containing t
 
 #### Configuration
 
-Explanation of the [values.yaml](https://github.com/cloud-native-toolkit/terraform-gitops-watson-nlp/blob/main/chart/watson-nlp/values.yaml)
+Explanation of the [values.yaml](../helm-nlp/values.yaml)
 
 - componentName - The Deployment and Services will be named using a combination of the Helm release, and this property.
 
@@ -86,16 +86,16 @@ ibm-entitlement-key
 
 3. Install the chart
 
-Clone helm chart repo.
+Clone the repo which contains the helm chart.
 
 ```sh
 git clone https://github.com/cloud-native-toolkit/terraform-gitops-watson-nlp
 ```
 
-Clone the watson-boms repo to use a provided sample [values.yaml](../helm-nlp/values.yaml).  
+Clone the watson-automation repo to use a provided sample [values.yaml](../helm-nlp/values.yaml).  
 
 ```sh
-git clone https://github.ibm.com/isv-assets/watson-boms
+git clone https://github.ibm.com/isv-assets/watson-automation
 ```
 
 You must edit this file to accept the Watson NLP license by setting the following property:
@@ -107,8 +107,8 @@ acceptLicense: true
 Copy your sample values.yaml and install the chart.
 
 ```sh
-cp watson-boms/helm-nlp/values.yaml test/values.yaml
-cd test
+cp watson-automation/helm-nlp/values.yaml terraform-gitops-watson-nlp/chart/watson-nlp/values.yaml
+cd terraform-gitops-watson-nlp/chart/watson-nlp
 helm install -f values.yaml watson-embedded .
 ```
 
