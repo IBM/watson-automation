@@ -1,0 +1,27 @@
+apiVersion: cloudnativetoolkit.dev/v1alpha1
+kind: BillOfMaterial
+metadata:
+  name: cluster-with-watson-nlp
+spec:
+  modules:
+    - name: ibm-vpc
+      version: v1.17.0
+    - name: ibm-vpc-subnets
+      version: v1.14.0
+    - name: ibm-vpc-gateways
+      version: v1.10.0
+    - name: ibm-ocp-vpc
+      version: v1.16.0
+    - name: ibm-object-storage
+      version: v4.1.0
+    - name: argocd-bootstrap
+      version: v1.12.0
+    - name: gitops-repo
+      alias: gitops_repo
+      version: v1.22.2
+    - name: terraform-gitops-ubi
+      alias: terraform_gitops_ubi
+      version: v0.0.8
+    - name: terraform-gitops-watson-nlp
+      alias: terraform_gitops_watson_nlp
+      version: v0.0.80

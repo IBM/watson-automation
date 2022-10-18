@@ -1,0 +1,14 @@
+componentName: watson-nlp
+acceptLicense: true
+serviceType: ClusterIP
+imagePullSecrets:
+  - artifactory-key
+registries:
+  - name: watson
+    url: wcp-ai-foundation-team-docker-virtual.artifactory.swg-devops.com
+runtime:
+  registry: watson
+  image: watson-nlp-runtime:1.0.0
+models:
+  - registry: watson
+    image: watson-nlp_syntax_izumo_lang_en_stock:1.0.0
