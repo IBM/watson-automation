@@ -50,7 +50,7 @@ You need the following prerequisites:
 
 1. Docker
 2. IBM id and IBM Cloud (paid) account
-3. isascalbe CLI (toolkit CLI)
+3. iascable CLI (toolkit CLI)
 4. Watson entitlement key
 5. GitHub.com access token
 6. grcpcurl
