@@ -43,25 +43,25 @@ variables:
 
   # nlp
   - name: terraform_gitops_watson_nlp_runtime_image
-    value: watson-nlp-runtime:1.0.0
+    value: watson-nlp-runtime:1.0.15
   - name: terraform_gitops_watson_nlp_runtime_registry
-    value: artifactory
+    value: watson
   - name: terraform_gitops_watson_nlp_accept_license
     value: false
   - name: terraform_gitops_watson_nlp_imagePullSecrets
     value:
-      - artifactory-key
+      - ibm-entitlement-key
   - name: terraform_gitops_watson_nlp_models
     value:
-      - registry: artifactory
-        image: watson-nlp_syntax_izumo_lang_en_stock:1.0.0
+      - registry: watson
+        image: watson-nlp_syntax_izumo_lang_en_stock:1.0.5
   - name: terraform_gitops_watson_nlp_registries
     value:
-      - name: artifactory
-        url: wcp-ai-foundation-team-docker-virtual.artifactory.swg-devops.com
+      - name: watson
+        url: cp.icr.io/cp/ai
   - name: terraform_gitops_watson_nlp_registryUserNames
     value:
-      - registry: artifactory
+      - registry: watson
         userName: xxx
 
   # ubi
