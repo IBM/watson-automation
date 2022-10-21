@@ -62,7 +62,7 @@ variables:
   - name: terraform_gitops_watson_nlp_registryUserNames
     value:
       - registry: watson
-        userName: xxx
+        userName: cp
 
   # ubi
   - name: terraform_gitops_ubi_command
