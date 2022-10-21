@@ -19,9 +19,27 @@ roks-new-nlp/output/cluster-with-watson-nlp/dependencies.dot
 roks-new-nlp/output/cluster-with-watson-nlp/destroy.sh
 roks-new-nlp/output/cluster-with-watson-nlp/terraform
 
-roks-existing-nlp/output
-roks-existing-nlp/credentials.properties
+
 roks-existing-nlp/output/credentials.properties
+roks-existing-nlp/output/cluster-with-watson-nlp/variables.yaml
+roks-existing-nlp/output/cluster-with-watson-nlp/terraform/terraform.tfstate
+roks-existing-nlp/output/cluster-with-watson-nlp/terraform/terraform.tfvars
+roks-existing-nlp/output/cluster-with-watson-nlp/terraform/.terraform.lock.hcl
+roks-existing-nlp/output/cluster-with-watson-nlp/terraform/.terraform.tfstate.lock.info
+roks-existing-nlp/output/cluster-with-watson-nlp/terraform/terraform.tfvars.backup
+roks-existing-nlp/output/cluster-with-watson-nlp/terraform/terraform.tfstate.backup
+roks-existing-nlp/output/cluster-with-watson-nlp/terraform/.kube
+roks-existing-nlp/output/cluster-with-watson-nlp/terraform/.tmp
+roks-existing-nlp/output/cluster-with-watson-nlp/terraform/bin2
+roks-existing-nlp/output/cluster-with-watson-nlp/terraform/docs
+roks-existing-nlp/output/cluster-with-watson-nlp/terraform/.terraform
+roks-existing-nlp/output/cluster-with-watson-nlp/terraform/clis-debug.log
+roks-existing-nlp/output/launch.sh
+roks-existing-nlp/output/cluster-with-watson-nlp/apply.sh
+roks-existing-nlp/output/cluster-with-watson-nlp/bom.yaml
+roks-existing-nlp/output/cluster-with-watson-nlp/dependencies.dot 
+roks-existing-nlp/output/cluster-with-watson-nlp/destroy.sh
+roks-existing-nlp/output/cluster-with-watson-nlp/terraform
 
 variables.yaml.tmp
 credentials.properties
