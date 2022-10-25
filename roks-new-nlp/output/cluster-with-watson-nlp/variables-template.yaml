@@ -43,7 +43,7 @@ variables:
 
   # nlp
   - name: terraform_gitops_watson_nlp_runtime_image
-    value: watson-nlp-runtime:1.0.15
+    value: watson-nlp-runtime:1.0.18
   - name: terraform_gitops_watson_nlp_runtime_registry
     value: watson
   - name: terraform_gitops_watson_nlp_accept_license
@@ -54,7 +54,7 @@ variables:
   - name: terraform_gitops_watson_nlp_models
     value:
       - registry: watson
-        image: watson-nlp_syntax_izumo_lang_en_stock:1.0.5
+        image: watson-nlp_syntax_izumo_lang_en_stock:1.0.6
   - name: terraform_gitops_watson_nlp_registries
     value:
       - name: watson
