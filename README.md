@@ -380,7 +380,7 @@ Open [Swagger](http://localhost:8080/swagger/).
 ## Resources
 
 * IBM Watson NLP
-  * **TO BE DONE** Announcement
+  * [IBM Helps Ecosystem Partners Accelerate AI Adoption by Making it Easier to Embed and Scale AI Across Their Business](https://newsroom.ibm.com/2022-10-25-IBM-Helps-Ecosystem-Partners-Accelerate-AI-Adoption-by-Making-it-Easier-to-Embed-and-Scale-AI-Across-Their-Business)
   * [Documentation](https://www.ibm.com/docs/en/watson-libraries?topic=watson-natural-language-processing-library-embed-home)
   * [Watson NLP Helm Chart](https://github.com/cloud-native-toolkit/terraform-gitops-watson-nlp/tree/main/chart/watson-nlp)
   * [Syntax model](https://www.ibm.com/docs/en/watson-libraries?topic=catalog-syntax)
