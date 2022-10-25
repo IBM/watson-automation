@@ -401,6 +401,7 @@ Open [Swagger](http://localhost:8080/swagger/).
   * [Watson Natural Language Processing Library for Embed](https://www.ibm.com/products/ibm-watson-natural-language-processing)
   * [IBM Digital Self-Serve Co-Create Experience for Embeddable AI](https://dsce.ibm.com/) 
 * IBM Technology Zone assets
+  * [Automation for IBM Watson Deployments](https://techzone.ibm.com/collection/automation-for-ibm-watson-core-deployments)
   * [Watson NLP - Text Classification](https://techzone.ibm.com/collection/watson-nlp-text-classification)
   * [Watson NLP - Entities & Keywords extraction](https://techzone.ibm.com/collection/watson-nlp-entities-keywords-extraction)
   * [Watson NLP - Topic Modeling](https://techzone.ibm.com/collection/watson-nlp-topic-modeling)
