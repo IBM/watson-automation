@@ -12,7 +12,7 @@ This document describes in more detail how to use the toolkit and the Watson NLP
 
 At a minimum you need the Watson NLP runtime image. The NLP runtime container runs in the Watson NLP pod at runtime.
 
-Additionally you have to access **TO BE DONE** ['model images'](https://ibmdocs-test.mybluemix.net/docs/en/watson-libraries?topic=home-working-nlp-models) which are necessary for different functionality provided by Watson NLP. There are two types of model images:
+Additionally you have to access ['model images'](https://www.ibm.com/docs/en/watson-libraries?topic=models-catalog) which are necessary for different functionality provided by Watson NLP. There are two types of model images:
 
 * Stock models provided out of the box by Watson NLP
 * Custom models provided by consumers
