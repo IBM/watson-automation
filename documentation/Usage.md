@@ -96,8 +96,6 @@ $ ./apply.sh
 
 Here are some best practices how to run Multipass:
 
-* The Multipass VM option will not currently work with Apple M1 based hardware.
-* Due to a current bug in iascable, when performing command `source credentials.properties` (applies only to Multipass), you will encounter an error `not a valid identifier` for some variable names. You can safely ignore this as you will be prompted later to enter a value.
 * When using Multipass, the launch script is not used.  Enter the VM and use apply.sh
 * When creating the VM with Multipass, if you see the following error on MacOS: 'cli-tools: timed out waiting for response'. It is neccessary to disable the MacOS firewall. 
 
