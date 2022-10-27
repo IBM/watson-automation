@@ -12,7 +12,7 @@ Key Technologies:
 
 The steps below describe the 'happy path' for developers and operation engineers to deploy a simple Watson NLP scenario on OpenShift as easily as possible. At the end of the happy path the following infrastructure, service and application components will have been deployed:
 
-1. Managed OpenShift cluster on the IBM Cloud on VPC ([screenshot](documentation/screenshots/ibm-cloud-01.png))
+1. Managed OpenShift cluster on the IBM Cloud on VPC
 2. ArgoCD running in the OpenShift cluster ([screenshot](documentation/screenshots/argocd-03.png))
 3. Watson NLP pod ([screenshot](documentation/screenshots/openshift-03.png))
   * Runtime container which provides gRCP and REST interfaces via a service
