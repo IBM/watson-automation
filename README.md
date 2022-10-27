@@ -72,6 +72,21 @@ iascable is the IBM Technology Zone Accelerator Toolkit CLI. Install iascable 2.
 curl -sL https://iascable.cloudnativetoolkit.dev/install.sh | sh
 iascable --version
 ```
+If you encounter an error `zsh: killed` on Apple M1, unfortunately this is due to an issue with the iascable binary. As a temporary workaround, install iascable using an alternative approach.
+
+If not already installed, install npm:
+
+```
+brew install npm
+```
+
+Install iascable via npm:
+
+```
+sudo -i rm /usr/local/bin/iascable
+npm install -g @cloudnativetoolkit/iascable
+```
+
 **4. Watson entitlement key**
 
 An [entitlement key](https://myibm.ibm.com/products-services/containerlibrary) is needed.
