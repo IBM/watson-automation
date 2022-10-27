@@ -18,12 +18,12 @@ This chart deploys the container images required to provide embedded Watson NLP 
 
 At a minimum a Watson NLP runtime image is required. The NLP runtime container runs in the Watson NLP pod at runtime. Additional `model images' are necessary for different functionality provided by Watson NLP. There are two types of model images:
 
-* Stock models provided by IBM
+* Pretrained models provided by IBM
 * Custom models provided by consumers
 
 The model containers run as Kubernetes initContainers. They are triggered when pods are created. Their purpose is to put the model artifacts onto pod storage so that the Watson NLP runtime container can access them. Once they have done this, these containers terminate.
 
-This chart deploys and Watson NLP runtime and one stock model image, the Syntax model.
+This chart deploys and Watson NLP runtime and one pretrained model image, the Syntax model.
 
 ### Prerequisites
 
