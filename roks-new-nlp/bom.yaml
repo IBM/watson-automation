@@ -4,24 +4,106 @@ metadata:
   name: cluster-with-watson-nlp
 spec:
   modules:
-    - name: ibm-vpc
-      version: v1.17.0
-    - name: ibm-vpc-subnets
-      version: v1.14.0
-    - name: ibm-vpc-gateways
-      version: v1.10.0
-    - name: ibm-ocp-vpc
-      version: v1.16.0
-    - name: ibm-object-storage
-      version: v4.1.0
-    - name: argocd-bootstrap
-      version: v1.12.0
     - name: gitops-repo
       alias: gitops_repo
       version: v1.22.2
+    - name: argocd-bootstrap
+      alias: argocd-bootstrap
+      version: v1.12.0
+    - name: ibm-ocp-vpc
+      alias: cluster
+      version: v1.16.3
+    - name: ibm-vpc
+      alias: ibm-vpc
+      version: v1.17.0
+    - name: ibm-vpc-gateways
+      alias: ibm-vpc-gateways
+      version: v1.10.0
     - name: terraform-gitops-ubi
       alias: terraform_gitops_ubi
-      version: v0.0.8
+      version: v0.0.26
     - name: terraform-gitops-watson-nlp
       alias: terraform_gitops_watson_nlp
-      version: v0.0.80
+      version: v1.0.0
+    - name: olm
+      version: v1.3.5
+    - name: sealed-secret-cert
+      version: v1.0.1
+    - name: ibm-resource-group
+      alias: resource_group
+      version: v3.3.5
+    - name: ibm-object-storage
+      alias: cos
+      version: v4.1.0
+    - name: ibm-vpc-subnets
+      version: v1.14.0
+    - name: gitops-namespace
+      alias: namespace
+      version: v1.14.0
+    - name: util-clis
+      version: v1.18.1
+  variables:
+    - name: gitops_repo_host
+      type: string
+      description: >-
+        The host for the git repository. The git host used can be a GitHub,
+        GitHub Enterprise, Gitlab, Bitbucket, Gitea or Azure DevOps server. If
+        the host is null assumes in-cluster Gitea instance will be used.
+      defaultValue: ''
+    - name: gitops_repo_org
+      type: string
+      description: >-
+        The org/group where the git repository exists/will be provisioned. If
+        the value is left blank then the username org will be used.
+      defaultValue: ''
+    - name: gitops_repo_project
+      type: string
+      description: >-
+        The project that will be used for the git repo. (Primarily used for
+        Azure DevOps repos)
+      defaultValue: ''
+    - name: gitops_repo_username
+      type: string
+      description: The username of the user with access to the repository
+      defaultValue: ''
+    - name: gitops_repo_token
+      type: string
+      description: The personal access token used to access the repository
+      defaultValue: ''
+      sensitive: true
+    - name: gitops_repo_repo
+      type: string
+      description: >-
+        The short name of the repository (i.e. the part after the org/group
+        name)
+    - name: region
+      type: string
+      description: The IBM Cloud region where the cluster will be/has been installed.
+    - name: ibmcloud_api_key
+      type: string
+      description: The IBM Cloud api token
+      sensitive: true
+    - name: worker_count
+      type: number
+      description: >-
+        The number of worker nodes that should be provisioned for classic
+        infrastructure
+      defaultValue: 3
+    - name: cluster_flavor
+      type: string
+      description: The machine type that will be provisioned for classic infrastructure
+      defaultValue: bx2.4x16
+    - name: common_tags
+      type: list(string)
+      description: Common tags that should be added to the instance
+      defaultValue: []
+    - name: resource_group_name
+      type: string
+      description: The name of the resource group
+    - name: ibm-vpc-subnets__count
+      type: number
+      description: The number of subnets that should be provisioned
+      defaultValue: 3
+    - name: namespace_name
+      type: string
+      description: The value that should be used for the namespace
