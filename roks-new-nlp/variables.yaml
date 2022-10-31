@@ -2,10 +2,10 @@ variables:
   # overall
   - name: region
     description: The IBM Cloud region where the instance should be provisioned
-    value: xxx
+    value: us-east
   - name: resource_group_name
     description: The name of the IBM Cloud resource group where the resources should be provisioned
-    value: xxx
+    value: dptiwari-minimized
   - name: common_tags 
     description: The list of tags that should be applied to all resources (does not work)
     value: []
@@ -26,20 +26,20 @@ variables:
   # namespace
   - name: namespace_name
     description: The name of the namespace that will be created within the cluster
-    value: xxx
+    value: watson-demo-minimized
 
   # gitops
   - name: gitops_repo_repo
     description: The name of the gitops repository that will be created
-    value: xxx
+    value: watson-minimized
   - name: gitops_repo_host
-    value: github.com
+    value: github.ibm.com
   - name: gitops_repo_org
-    value: xxx
+    value: Diwakar-Tiwari
   - name: gitops_repo_username
-    value: xxx
+    value: Diwakar-Tiwari
   - name: gitops_repo_project # only used for Azure
-    value: xxx
+    value: watson-minimized
 
   # nlp
   - name: terraform_gitops_watson_nlp_runtime_image
@@ -47,7 +47,7 @@ variables:
   - name: terraform_gitops_watson_nlp_runtime_registry
     value: watson
   - name: terraform_gitops_watson_nlp_accept_license
-    value: false
+    value: true
   - name: terraform_gitops_watson_nlp_imagePullSecrets
     value:
       - ibm-entitlement-key
