@@ -5,7 +5,7 @@
 🔴 IMPORTANT: At this point this functionality is experimental only and subject to change.
 
 Key Technologies:
-* [IBM Watson NLP](https://ibmdocs-test.mybluemix.net/docs/en/watson-libraries?topic=watson-natural-language-processing-home) **TO BE DONE** (Natural Language Processing) comes with a wide variety of text processing functions, such as emotion analysis and topic modeling. Watson NLP is built on top of the best AI open source software. Additionally it provides stable and supported interfaces, it handles a wide range of languages and its quality is enterprise proven. The cloud-native Watson NLP containers can be deployed on various Kubernetes based platforms.
+* [IBM Watson NLP](https://www.ibm.com/docs/en/watson-libraries?topic=watson-natural-language-processing-library-embed-home) (Natural Language Processing) comes with a wide variety of text processing functions, such as emotion analysis and topic modeling. Watson NLP is built on top of the best AI open source software. Additionally it provides stable and supported interfaces, it handles a wide range of languages and its quality is enterprise proven. The cloud-native Watson NLP containers can be deployed on various Kubernetes based platforms.
 * [IBM Technology Zone Accelerator Toolkit](https://operate.cloudnativetoolkit.dev/) is an opinionated open source framework on top of the standard technologies Terraform and ArgoCD. The toolkit allows automating deployments and operations of infrastructure like Red Hat OpenShift clusters and applications.
 
 **Happy Path**
@@ -66,12 +66,27 @@ Register on [IBM Cloud](https://cloud.ibm/registration) and enter your payment i
 
 **3. iascable CLI**
 
-iascable is the IBM Technology Zone Accelerator Toolkit CLI. Install iascable 2.25.1 or later.
+iascable is the IBM Technology Zone Accelerator Toolkit CLI. Install iascable 2.25.4 or later.
 
 ```sh
 curl -sL https://iascable.cloudnativetoolkit.dev/install.sh | sh
 iascable --version
 ```
+If you encounter an error `zsh: killed` on Apple M1, unfortunately this is due to an issue with the iascable binary. As a temporary workaround, install iascable using an alternative approach.
+
+If not already installed, install npm:
+
+```
+brew install npm
+```
+
+Install iascable via npm:
+
+```
+sudo -i rm /usr/local/bin/iascable
+npm install -g @cloudnativetoolkit/iascable
+```
+
 **4. Watson entitlement key**
 
 An [entitlement key](https://myibm.ibm.com/products-services/containerlibrary) is needed.
@@ -197,26 +212,26 @@ variables:
 
   # nlp
   - name: terraform_gitops_watson_nlp_runtime_image
-    value: watson-nlp-runtime:1.0.0
+    value: watson-nlp-runtime:1.0.18
   - name: terraform_gitops_watson_nlp_runtime_registry
-    value: artifactory
+    value: watson
   - name: terraform_gitops_watson_nlp_accept_license
     value: false
   - name: terraform_gitops_watson_nlp_imagePullSecrets
     value:
-      - artifactory-key
+      - ibm-entitlement-key
   - name: terraform_gitops_watson_nlp_models
     value:
-      - registry: artifactory
-        image: watson-nlp_syntax_izumo_lang_en_stock:1.0.0
+      - registry: watson
+        image: watson-nlp_syntax_izumo_lang_en_stock:1.0.6
   - name: terraform_gitops_watson_nlp_registries
     value:
-      - name: artifactory
-        url: wcp-ai-foundation-team-docker-virtual.artifactory.swg-devops.com
+      - name: watson
+        url: cp.icr.io/cp/ai
   - name: terraform_gitops_watson_nlp_registryUserNames
     value:
-      - registry: artifactory
-        userName: xxx
+      - registry: watson
+        userName: cp
 
   # ubi
   - name: terraform_gitops_ubi_command
@@ -380,10 +395,10 @@ Open [Swagger](http://localhost:8080/swagger/).
 ## Resources
 
 * IBM Watson NLP
-  * **TO BE DONE** Announcement
-  * **TO BE DONE** [Documentation](https://ibmdocs-test.mybluemix.net/docs/en/watson-libraries?topic=watson-natural-language-processing-home)
+  * [IBM Helps Ecosystem Partners Accelerate AI Adoption by Making it Easier to Embed and Scale AI Across Their Business](https://newsroom.ibm.com/2022-10-25-IBM-Helps-Ecosystem-Partners-Accelerate-AI-Adoption-by-Making-it-Easier-to-Embed-and-Scale-AI-Across-Their-Business)
+  * [Documentation](https://www.ibm.com/docs/en/watson-libraries?topic=watson-natural-language-processing-library-embed-home)
   * [Watson NLP Helm Chart](https://github.com/cloud-native-toolkit/terraform-gitops-watson-nlp/tree/main/chart/watson-nlp)
-  * **TO BE DONE** [Syntax model](https://ibmdocs-test.mybluemix.net/docs/en/watson-libraries?topic=models-syntax)
+  * [Syntax model](https://www.ibm.com/docs/en/watson-libraries?topic=catalog-syntax)
   * [Samples](https://github.com/ibm-build-labs/Watson-NLP)
 * IBM Technology Zone Accelerator Toolkit
   * [Documentation](https://operate.cloudnativetoolkit.dev/)
@@ -396,8 +411,12 @@ Open [Swagger](http://localhost:8080/swagger/).
     * [Lab 2: Terraform](https://operate.cloudnativetoolkit.dev/learn/iascable/lab2/)
     * [Lab 3: GitOps](https://operate.cloudnativetoolkit.dev/learn/iascable/lab3/)
     * [Lab 4: Create UBI module](https://operate.cloudnativetoolkit.dev/learn/iascable/lab4/)
-* **TO BE DONE** [IBM Embeddable AI Home Page](https://dce.blabs.cloud/) 
+* Embeddeable AI
+  * [PartnerWorld](https://www.ibm.com/partnerworld/program/embeddableai)
+  * [Watson Natural Language Processing Library for Embed](https://www.ibm.com/products/ibm-watson-natural-language-processing)
+  * [IBM Digital Self-Serve Co-Create Experience for Embeddable AI](https://dsce.ibm.com/) 
 * IBM Technology Zone assets
+  * [Automation for IBM Watson Deployments](https://techzone.ibm.com/collection/automation-for-ibm-watson-deployments)
   * [Watson NLP - Text Classification](https://techzone.ibm.com/collection/watson-nlp-text-classification)
   * [Watson NLP - Entities & Keywords extraction](https://techzone.ibm.com/collection/watson-nlp-entities-keywords-extraction)
   * [Watson NLP - Topic Modeling](https://techzone.ibm.com/collection/watson-nlp-topic-modeling)

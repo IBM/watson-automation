@@ -12,7 +12,7 @@ This document describes in more detail how to use the toolkit and the Watson NLP
 
 At a minimum you need the Watson NLP runtime image. The NLP runtime container runs in the Watson NLP pod at runtime.
 
-Additionally you have to access **TO BE DONE** ['model images'](https://ibmdocs-test.mybluemix.net/docs/en/watson-libraries?topic=home-working-nlp-models) which are necessary for different functionality provided by Watson NLP. There are two types of model images:
+Additionally you have to access ['model images'](https://www.ibm.com/docs/en/watson-libraries?topic=models-catalog) which are necessary for different functionality provided by Watson NLP. There are two types of model images:
 
 * Stock models provided out of the box by Watson NLP
 * Custom models provided by consumers
@@ -96,8 +96,6 @@ $ ./apply.sh
 
 Here are some best practices how to run Multipass:
 
-* The Multipass VM option will not currently work with Apple M1 based hardware.
-* Due to a current bug in iascable, when performing command `source credentials.properties` (applies only to Multipass), you will encounter an error `not a valid identifier` for some variable names. You can safely ignore this as you will be prompted later to enter a value.
 * When using Multipass, the launch script is not used.  Enter the VM and use apply.sh
 * When creating the VM with Multipass, if you see the following error on MacOS: 'cli-tools: timed out waiting for response'. It is neccessary to disable the MacOS firewall. 
 
