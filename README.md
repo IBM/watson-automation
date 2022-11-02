@@ -554,3 +554,7 @@ Open [Swagger](http://localhost:8080/swagger/).
   - [Watson NLP - Creating Client Applications](https://techzone.ibm.com/collection/watson-nlp-creating-client-applications)
   - [Watson NLP - Serving Models with Standalone Containers](https://techzone.ibm.com/collection/watson-nlp-serving-models-with-standalone-containers)
   - [Watson NLP - Serving Models with Kubernetes and OpenShift](https://techzone.ibm.com/collection/watson-nlp-serving-nlp-models)
+
+## License
+
+This project is licensed under the Apache 2 License - see the [LICENSE](LICENSE) file for details.
