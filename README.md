@@ -11,7 +11,7 @@ Key Technologies:
 
 ## Happy Path
 
-The steps below describe the 'happy path' for developers and operation engineers to deploy a simple Watson NLP scenario on OpenShift as easily as possible. At the end of the happy path the following infrastructure, service and application components will have been deployed:
+The steps below describe the "happy path" for developers and operation engineers to deploy a simple Watson NLP scenario on OpenShift as easily as possible. At the end of the happy path the following infrastructure, service, and application components will have been deployed:
 
 1. Managed OpenShift cluster on the IBM Cloud on VPC ([screenshot](documentation/screenshots/ibm-cloud-01.png))
 2. ArgoCD running in the OpenShift cluster ([screenshot](documentation/screenshots/argocd-03.png))
@@ -114,7 +114,7 @@ Install [`oc`](https://docs.openshift.com/container-platform/4.7/cli_reference/o
 The following steps need to be performed:
 
 1. Clone repo
-2. Understand the BOM (bill of materials)
+2. Understand the BOM (Bill of Materials)
 3. Define `variables.yaml`
 4. Define `credentials.properties`
 5. Run `iascable build`
@@ -127,11 +127,11 @@ git clone https://github.com/ibm/watson-automation
 cd watson-automation/roks-new-nlp
 ```
 
-#### **2. Understand BOM (bill of materials)**
+#### **2. Understand BOM (Bill of Materials)**
 
-The bill of materials ([`bom.yaml`](`roks-new-nlp/bom.yaml`)) contains the [Technology Zone Accelerator Toolkit modules](https://modules.cloudnativetoolkit.dev/) that will be deployed: OpenShift, ArgoCD, Watson NLP and an UBI container.
+The Bill of Materials ([`bom.yaml`](`roks-new-nlp/bom.yaml`)) contains the [Technology Zone Accelerator Toolkit modules](https://modules.cloudnativetoolkit.dev/) that will be deployed: OpenShift, ArgoCD, Watson NLP and an UBI container.
 
-Note: You don't have to change this file.
+Note: You dont have to change this file.
 
 ```yaml
 spec:
@@ -159,7 +159,7 @@ spec:
       version: v0.0.80
 ```
 
-The bill of material can be used by different consumers. Consumer specific variables need to be defined in `variables.yaml` and `credentials.properties`.
+The Bill of Material can be used by different consumers. Consumer specific variables need to be defined in `variables.yaml` and `credentials.properties`.
 
 #### **3. Define `variables.yaml`**
 
@@ -170,7 +170,7 @@ cp output/cluster-with-watson-nlp/variables-template.yaml output/cluster-with-wa
 vi output/cluster-with-watson-nlp/variables.yaml
 ```
 
-Define the variables in `variables.yaml`. If not done, you will get prompted later. Replace all 'xxx' occurances. You must also change 'terraform_gitops_watson_nlp_accept_license' from false to true.
+Define the variables in `variables.yaml`. If not done, you will get prompted later. Replace all "xxx" occurances. You must also change "terraform_gitops_watson_nlp_accept_license" from false to true.
 
 ```yaml
 variables:
@@ -239,7 +239,7 @@ variables:
 
   # ubi
   - name: terraform_gitops_ubi_command
-    value: echo 'helloworld'
+    value: echo helloworld
 ```
 
 #### **4. Define credentials.properties**
@@ -312,7 +312,7 @@ or
 oc login --token=sha256~xxx --server=https://xxx
 ```
 
-To get the OpenShift login token, open the OpenShift console, click on your user name in the upper right corner and choose 'copy login command'.
+To get the OpenShift login token, open the OpenShift console, click on your user name in the upper right corner and choose "copy login command".
 
 ```sh
 YOUR_NAMESPACE=watson-demo
