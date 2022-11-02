@@ -263,7 +263,7 @@ export TF_VAR_ibmcloud_api_key=xxx
 export TF_VAR_terraform_gitops_watson_nlp_registry_credentials=xxx
 ```
 
-#### **5. Run `iascable` build**
+#### **5. Run `iascable build`**
 
 Use `iascable` to create the Terraform code.
 
