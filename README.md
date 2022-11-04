@@ -26,6 +26,8 @@ The steps below describe the "happy path" for developers and operation engineers
 
 5. Snippets to invoke Watson NLP via gRCP and REST from a local environment ([screenshot](documentation/screenshots/validation-01.png))
 
+[![video](documentation/screenshots/video.png)](https://youtu.be/8lbVRAvJgy4)
+
 The following [flip book](documentation/Flip_Book_-_Automation_for_IBM_Watson_Deployments.pdf) contains screenshots that describes the setup as well as the results.
 
 [![flipbook](documentation/screenshots/flipbook.png)](documentation/Flip_Book_-_Automation_for_IBM_Watson_Deployments.pdf)
