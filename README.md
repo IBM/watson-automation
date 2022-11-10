@@ -7,7 +7,7 @@
 Key Technologies:
 
 - [IBM Watson NLP](https://www.ibm.com/docs/en/watson-libraries?topic=watson-natural-language-processing-library-embed-home) (Natural Language Processing) comes with a wide variety of text processing functions, such as emotion analysis and topic modeling. Watson NLP is built on top of the best AI open source software. Additionally it provides stable and supported interfaces, it handles a wide range of languages and its quality is enterprise proven. The cloud-native Watson NLP containers can be deployed on various Kubernetes-based platforms.
-- [IBM Technology Zone Accelerator Toolkit](https://operate.cloudnativetoolkit.dev/) is an opinionated open source framework on top of the standard technologies Terraform and ArgoCD. The toolkit allows automating deployments and operations of infrastructure like Red Hat OpenShift clusters and applications.
+- [IBM Technology Zone Deployer](https://operate.cloudnativetoolkit.dev/) is an opinionated open source framework on top of the standard technologies Terraform and ArgoCD. The toolkit allows automating deployments and operations of infrastructure like Red Hat OpenShift clusters and applications.
 
 ## Happy Path
 
@@ -73,7 +73,7 @@ Register on [IBM Cloud](https://cloud.ibm/registration) and enter your payment i
 
 #### **3. `iascable` CLI**
 
-`iascable` is the IBM Technology Zone Accelerator Toolkit CLI. Install `iascable` 2.25.4 or later.
+`iascable` is the IBM Technology Zone Deployer CLI. Install `iascable` 2.25.4 or later.
 
 ```sh
 curl -sL https://iascable.cloudnativetoolkit.dev/install.sh | sh
@@ -131,7 +131,7 @@ cd watson-automation/roks-new-nlp
 
 #### **2. Understand BOM (Bill of Materials)**
 
-The Bill of Materials ([`bom.yaml`](`roks-new-nlp/bom.yaml`)) contains the [Technology Zone Accelerator Toolkit modules](https://modules.cloudnativetoolkit.dev/) that will be deployed: OpenShift, ArgoCD, Watson NLP and an UBI container.
+The Bill of Materials ([`bom.yaml`](`roks-new-nlp/bom.yaml`)) contains the [Technology Zone Deployer modules](https://modules.cloudnativetoolkit.dev/) that will be deployed: OpenShift, ArgoCD, Watson NLP and an UBI container.
 
 Note: You dont have to change this file.
 
@@ -531,7 +531,7 @@ Open [Swagger](http://localhost:8080/swagger/).
   - [Watson NLP Helm Chart](https://github.com/cloud-native-toolkit/terraform-gitops-watson-nlp/tree/main/chart/watson-nlp)
   - [Syntax model](https://www.ibm.com/docs/en/watson-libraries?topic=catalog-syntax)
   - [Samples](https://github.com/ibm-build-labs/Watson-NLP)
-- IBM Technology Zone Accelerator Toolkit
+- IBM Technology Zone Deployer
   - [Documentation](https://operate.cloudnativetoolkit.dev/)
   - [Modules](https://modules.cloudnativetoolkit.dev/)
   - [CLI](https://github.com/cloud-native-toolkit/iascable)
