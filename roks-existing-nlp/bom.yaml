@@ -4,15 +4,27 @@ metadata:
   name: cluster-with-watson-nlp
 spec:
   modules:
-    - name: ocp-login
-    - name: argocd-bootstrap
-      version: v1.12.0
     - name: gitops-repo
       alias: gitops_repo
-      version: v1.22.2
+      version: v1.23.1
+    - name: argocd-bootstrap
+      alias: argocd-bootstrap
+      version: v1.12.0
+    - name: ocp-login
+      alias: cluster
+      version: v1.6.0
     - name: terraform-gitops-ubi
       alias: terraform_gitops_ubi
-      version: v0.0.8
+      version: v0.0.26
     - name: terraform-gitops-watson-nlp
       alias: terraform_gitops_watson_nlp
-      version: v0.0.80
+      version: v1.0.0
+    - name: util-clis
+      version: v1.18.1
+    - name: olm
+      version: v1.3.5
+    - name: sealed-secret-cert
+      version: v1.0.1
+    - name: gitops-namespace
+      alias: namespace
+      version: v1.14.0
