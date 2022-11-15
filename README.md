@@ -125,34 +125,55 @@ $ cd watson-automation/roks-new-nlp
 
 **2. Understand BOM (bill of materials)**
 
-The bill of materials ([bom.yaml](roks-new-nlp/bom.yaml)) contains the [Technology Zone Accelerator Toolkit modules](https://modules.cloudnativetoolkit.dev/) that will be deployed: OpenShift, ArgoCD, Watson NLP and an UBI container.
+The bill of materials ([bom.yaml](https://github.com/IBM/watson-automation/blob/main/roks-new-nlp/bom.yaml)) contains the [Technology Zone Accelerator Toolkit modules](https://modules.cloudnativetoolkit.dev/) that will be deployed: OpenShift, ArgoCD, Watson NLP and an UBI container.
 
 Note: You don't have to change this file.
 
 ```yaml
 spec:
   modules:
-    - name: ibm-vpc
-      version: v1.17.0
-    - name: ibm-vpc-subnets
-      version: v1.14.0
-    - name: ibm-vpc-gateways
-      version: v1.10.0
-    - name: ibm-ocp-vpc
-      version: v1.16.0
-    - name: ibm-object-storage
-      version: v4.1.0
-    - name: argocd-bootstrap
-      version: v1.12.0
     - name: gitops-repo
       alias: gitops_repo
-      version: v1.22.2
+      version: v1.23.1
+    - name: argocd-bootstrap
+      alias: argocd-bootstrap
+      version: v1.12.0
+    - name: gitops-namespace
+      alias: namespace
+      version: v1.14.0
+    - name: ibm-resource-group
+      alias: resource_group
+      version: v3.3.5
+    - name: ibm-object-storage
+      alias: cos
+      version: v4.1.0
+    - name: ibm-ocp-vpc
+      alias: cluster
+      version: v1.16.3
+    - name: ibm-vpc
+      alias: ibm-vpc
+      version: v1.17.0
+    - name: ibm-vpc-gateways
+      alias: ibm-vpc-gateways
+      version: v1.10.0
+    - name: ibm-vpc-subnets
+      alias: ibm-vpc-subnets
+      version: v1.14.0
+    - name: olm
+      alias: olm
+      version: v1.3.5
+    - name: sealed-secret-cert
+      alias: sealed-secret-cert
+      version: v1.0.1
     - name: terraform-gitops-ubi
       alias: terraform_gitops_ubi
-      version: v0.0.8
+      version: v0.0.26
     - name: terraform-gitops-watson-nlp
       alias: terraform_gitops_watson_nlp
-      version: v0.0.80
+      version: v1.0.0
+    - name: util-clis
+      alias: util-clis
+      version: v1.18.1
 ```
 
 The bill of material can be used by different consumers. Consumer specific variables need to be defined in variables.yaml and credentials.properties.

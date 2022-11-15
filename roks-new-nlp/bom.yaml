@@ -6,10 +6,19 @@ spec:
   modules:
     - name: gitops-repo
       alias: gitops_repo
-      version: v1.22.2
+      version: v1.23.1
     - name: argocd-bootstrap
       alias: argocd-bootstrap
       version: v1.12.0
+    - name: gitops-namespace
+      alias: namespace
+      version: v1.14.0
+    - name: ibm-resource-group
+      alias: resource_group
+      version: v3.3.5
+    - name: ibm-object-storage
+      alias: cos
+      version: v4.1.0
     - name: ibm-ocp-vpc
       alias: cluster
       version: v1.16.3
@@ -19,26 +28,21 @@ spec:
     - name: ibm-vpc-gateways
       alias: ibm-vpc-gateways
       version: v1.10.0
+    - name: ibm-vpc-subnets
+      alias: ibm-vpc-subnets
+      version: v1.14.0
+    - name: olm
+      alias: olm
+      version: v1.3.5
+    - name: sealed-secret-cert
+      alias: sealed-secret-cert
+      version: v1.0.1
     - name: terraform-gitops-ubi
       alias: terraform_gitops_ubi
       version: v0.0.26
     - name: terraform-gitops-watson-nlp
       alias: terraform_gitops_watson_nlp
       version: v1.0.0
-    - name: olm
-      version: v1.3.5
-    - name: sealed-secret-cert
-      version: v1.0.1
-    - name: ibm-resource-group
-      alias: resource_group
-      version: v3.3.5
-    - name: ibm-object-storage
-      alias: cos
-      version: v4.1.0
-    - name: ibm-vpc-subnets
-      version: v1.14.0
-    - name: gitops-namespace
-      alias: namespace
-      version: v1.14.0
     - name: util-clis
+      alias: util-clis
       version: v1.18.1

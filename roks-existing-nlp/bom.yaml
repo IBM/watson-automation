@@ -6,7 +6,7 @@ spec:
   modules:
     - name: gitops-repo
       alias: gitops_repo
-      version: v1.22.2
+      version: v1.23.1
     - name: argocd-bootstrap
       alias: argocd-bootstrap
       version: v1.12.0
@@ -19,6 +19,8 @@ spec:
     - name: terraform-gitops-watson-nlp
       alias: terraform_gitops_watson_nlp
       version: v1.0.0
+    - name: util-clis
+      version: v1.18.1
     - name: olm
       version: v1.3.5
     - name: sealed-secret-cert
@@ -26,5 +28,3 @@ spec:
     - name: gitops-namespace
       alias: namespace
       version: v1.14.0
-    - name: util-clis
-      version: v1.18.1
