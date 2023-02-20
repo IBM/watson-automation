@@ -93,7 +93,7 @@ Explanation of the [`values.yaml`](../helm-nlp/values.yaml)
    Clone the watson-automation repo to use a provided sample [values.yaml](../helm-nlp/values.yaml).
 
    ```sh
-   git clone https://github.ibm.com/isv-assets/watson-automation
+   git clone https://github.com/IBM/watson-automation
    ```
 
    You must edit the 1 file to accept the Watson NLP license by setting the following property:
