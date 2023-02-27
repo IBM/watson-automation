@@ -8,7 +8,7 @@ registries:
     url: cp.icr.io/cp/ai
 runtime:
   registry: watson
-  image: watson-nlp-runtime:1.0.18
+  image: watson-nlp-runtime:1.1.0
 models:
   - registry: watson
-    image: watson-nlp_syntax_izumo_lang_en_stock:1.0.7
+    image: watson-nlp_syntax_izumo_lang_en_stock:1.0.9
