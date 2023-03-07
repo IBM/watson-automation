@@ -84,10 +84,11 @@ Explanation of the [`values.yaml`](../helm-nlp/values.yaml)
 
 3. Install the chart
 
-   Clone the repo which contains the helm chart.
+   Begin by adding the repo with the chart to your helm client
 
    ```sh
-   git clone https://github.com/cloud-native-toolkit/terraform-gitops-watson-nlp
+   helm repo add toolkit-charts https://charts.cloudnativetoolkit.dev
+   helm repo update
    ```
 
    Clone the watson-automation repo to use a provided sample [values.yaml](../helm-nlp/values.yaml).
@@ -105,9 +106,8 @@ Explanation of the [`values.yaml`](../helm-nlp/values.yaml)
    Copy your sample `values.yaml` and install the chart.
 
    ```sh
-   cp watson-automation/helm-nlp/values.yaml terraform-gitops-watson-nlp/chart/watson-nlp/values.yaml
    cd terraform-gitops-watson-nlp/chart/watson-nlp
-   helm install -f values.yaml watson-embedded .
+   helm install watson-embedded -f values.yaml toolkit-charts/watson-nlp
    ```
 
    Verify the following components were created:
