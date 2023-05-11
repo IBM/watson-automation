@@ -103,9 +103,9 @@ An [entitlement key](https://www.ibm.com/account/reg/us-en/subscribe?formid=urx-
 
 Create an [access token on GitHub.com](https://docs.github.com/en/authentication/keeping-your-account-and-data-secure/creating-a-personal-access-token).
 
-#### **6. `grcpurl`**
+#### **6. `grpcurl`**
 
-Install [grcpurl](https://github.com/fullstorydev/grpcurl).
+Install [grpcurl](https://github.com/fullstorydev/grpcurl).
 
 #### **7. `oc`**
 
